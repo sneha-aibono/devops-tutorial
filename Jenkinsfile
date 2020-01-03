@@ -37,4 +37,16 @@ node {
             app.push("latest")
         }
     }
+
+    stage ('Deploy') {
+        steps{
+            sshagent(credentials : ['ssh-server-credentials']) {
+                sh 'ssh -o StrictHostKeyChecking=no frontend@13.233.69.23 uptime'
+                sh 'docker pull sneha11/devops-tutorial'
+                sh 'docker run -p 8000:8000 -d sneha11/devops-tutorial'
+            }
+
+            echo "====++++Deployed to the server successfully++++===="
+        }
+    }
 }
