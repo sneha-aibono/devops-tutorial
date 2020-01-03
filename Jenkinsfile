@@ -11,11 +11,11 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        // app = docker.build("sneha11/devops-tutorial")
-        app.inside {
-            sh 'docker-compose build'
-            echo 'Image built'
-        }
+        app = docker.build("sneha11/devops-tutorial")
+        // app.inside {
+        //     sh 'docker-compose build'
+        //     echo 'Image built'
+        // }
     }
 
     stage('Test image') {
