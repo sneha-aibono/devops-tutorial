@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  sample:
+    container_name: devops-tutorial-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sneha11/devops-tutorial
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '8000:8000'
