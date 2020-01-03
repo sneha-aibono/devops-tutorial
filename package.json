@@ -16,8 +16,9 @@
     "docker",
     "dockerfile"
   ],
-  "author": "miiro@getintodevops.com",
+  "author": "sneha.sonkere@aibono.com",
   "license": "ISC",
-  "devDependencies": { "test": ">=0.6.0" }
+  "devDependencies": {
+    "test": ">=0.6.0"
+  }
 }
-
